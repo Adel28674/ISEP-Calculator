@@ -100,4 +100,17 @@ class CalculatorTest {
 //
 //        assertEquals(expectedValue, calculator.evaluateMathExpression(expression));
 //    }
+
+
+
+        @ParameterizedTest(name = "{index} => input={0}, expected={1}")
+        @CsvSource({
+                "'-15', -15",
+                "'-1', -1"
+        })
+        void basicNegativeInteger(String expression, double expectedValue) {
+            Calculator calculator = new Calculator();
+
+            assertEquals(expectedValue, calculator.convertStringToDouble(expression));
+        }
 }

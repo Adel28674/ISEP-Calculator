@@ -59,20 +59,20 @@ class CalculatorTest {
         assertEquals(expectedValue, calculator.addition(expression));
     }
 
-//    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
-//    @CsvSource({
-//            "'1 - 1', 0",
-//            "'8-5', 3",
-//            "'13-14', -1",
-//            "'20-10-5', 5",
-//            "'5 - 0 - 4 - 0 - 3', -2"
-//    })
-//    void subtractions(String expression, double expectedValue) {
-//        Calculator calculator = new Calculator();
-//
-//        assertEquals(expectedValue, calculator.evaluateMathExpression(expression));
-//    }
-//
+    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
+    @CsvSource({
+            "'1 - 1', 0",
+            "'8-5', 3",
+            "'13-14', -1",
+            "'20-10-5', 5",
+            "'5 - 0 - 4 - 0 - 3', -2"
+    })
+    void subtractions(String expression, double expectedValue) {
+        Calculator calculator = new Calculator();
+
+        assertEquals(expectedValue, calculator.substract(expression));
+    }
+
 //    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
 //    @CsvSource({
 //            "'0 * 0', 0",

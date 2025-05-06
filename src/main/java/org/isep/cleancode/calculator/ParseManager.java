@@ -10,7 +10,7 @@ public class ParseManager {
     }
 
     public static String[] splitExpressionByMinus(String expression) {
-        return expression.split("\\+");
+        return expression.split("\\-");
     }
 
 }

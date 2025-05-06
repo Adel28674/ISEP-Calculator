@@ -45,20 +45,20 @@ class CalculatorTest {
         assertEquals(expectedValue, calculator.addition(expression));
     }
 
-//    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
-//    @CsvSource({
-//            "'1 + 1 + 1', 3",
-//            "'12 + 12 + 1', 25",
-//            "'13+12+11', 36",
-//            "'2+ 3+ 5', 10",
-//            "'8 +3+3', 14"
-//    })
-//    void multipleAdditions(String expression, double expectedValue) {
-//        Calculator calculator = new Calculator();
-//
-//        assertEquals(expectedValue, calculator.evaluateMathExpression(expression));
-//    }
-//
+    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
+    @CsvSource({
+            "'1 + 1 + 1', 3",
+            "'12 + 12 + 1', 25",
+            "'13+12+11', 36",
+            "'2+ 3+ 5', 10",
+            "'8 +3+3', 14"
+    })
+    void multipleAdditions(String expression, double expectedValue) {
+        Calculator calculator = new Calculator();
+
+        assertEquals(expectedValue, calculator.addition(expression));
+    }
+
 //    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
 //    @CsvSource({
 //            "'1 - 1', 0",

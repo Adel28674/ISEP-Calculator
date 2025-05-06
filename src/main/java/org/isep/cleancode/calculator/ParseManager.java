@@ -9,4 +9,8 @@ public class ParseManager {
         return expression.split("\\+");
     }
 
+    public static String[] splitExpressionByMinus(String expression) {
+        return expression.split("\\+");
+    }
+
 }

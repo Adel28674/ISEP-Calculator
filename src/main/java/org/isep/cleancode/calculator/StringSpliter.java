@@ -1,9 +1,6 @@
 package org.isep.cleancode.calculator;
 
-public class ParseManager {
-    public static double parseDouble(String expression) {
-        return Double.parseDouble(expression);
-    }
+public class StringSpliter {
 
     public static String[] splitExpressionByPlus(String expression) {
         return expression.split("\\+");

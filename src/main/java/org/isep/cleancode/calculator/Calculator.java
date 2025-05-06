@@ -6,34 +6,34 @@ public class Calculator {
     }
 
     public double convertStringToDouble(String expression){
-        return ParseManager.parseDouble(expression);
+        return ParserManager.parseDouble(expression);
     }
 
     public double addition(String expression) {
         Double sum = 0.0;
-        for (String factor : ParseManager.splitExpressionByPlus(expression)) {
-            sum += ParseManager.parseDouble(factor);
+        for (String factor : StringSpliter.splitExpressionByPlus(expression)) {
+            sum += ParserManager.parseDouble(factor);
         }
         return sum;
     }
 
     public double substract(String expression){
-        String [] factors = ParseManager.splitExpressionByMinus(expression);
+        String [] factors = StringSpliter.splitExpressionByMinus(expression);
 
-        double sum = ParseManager.parseDouble(factors[0]);
+        double sum = ParserManager.parseDouble(factors[0]);
         for (int i = 1; i < factors.length; i++) {
-            sum -= ParseManager.parseDouble(factors[i]);
+            sum -= ParserManager.parseDouble(factors[i]);
         }
 
         return sum;
     }
 
     public double multiply(String expression){
-        String [] factors = ParseManager.splitExpressionByStar(expression);
+        String [] factors = StringSpliter.splitExpressionByStar(expression);
 
-        double sum = ParseManager.parseDouble(factors[0]);
+        double sum = ParserManager.parseDouble(factors[0]);
         for (int i = 1; i < factors.length; i++) {
-            sum *= ParseManager.parseDouble(factors[i]);
+            sum *= ParserManager.parseDouble(factors[i]);
         }
 
         return sum;

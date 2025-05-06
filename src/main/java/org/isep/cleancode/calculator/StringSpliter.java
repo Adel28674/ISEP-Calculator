@@ -1,7 +1,6 @@
 package org.isep.cleancode.calculator;
 
 public class StringSpliter {
-
     public static String[] splitExpressionByPlus(String expression) {
         return expression.split("\\+");
     }

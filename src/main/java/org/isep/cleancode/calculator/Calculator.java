@@ -28,6 +28,17 @@ public class Calculator {
         return sum;
     }
 
+    public double multiply(String expression){
+        String [] factors = ParseManager.splitExpressionByStar(expression);
+
+        double sum = ParseManager.parseDouble(factors[0]);
+        for (int i = 1; i < factors.length; i++) {
+            sum *= ParseManager.parseDouble(factors[i]);
+        }
+
+        return sum;
+    }
+
 
 
 }

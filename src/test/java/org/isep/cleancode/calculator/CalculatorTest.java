@@ -73,21 +73,21 @@ class CalculatorTest {
         assertEquals(expectedValue, calculator.substract(expression));
     }
 
-//    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
-//    @CsvSource({
-//            "'0 * 0', 0",
-//            "'0 * 1', 0",
-//            "'1 * 0', 0",
-//            "'2 * 2', 4",
-//            "'1*2*3*4', 24",
-//            "'9 * 0.5', 4.5"
-//    })
-//    void multiplications(String expression, double expectedValue) {
-//        Calculator calculator = new Calculator();
-//
-//        assertEquals(expectedValue, calculator.evaluateMathExpression(expression));
-//    }
-//
+    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
+    @CsvSource({
+            "'0 * 0', 0",
+            "'0 * 1', 0",
+            "'1 * 0', 0",
+            "'2 * 2', 4",
+            "'1*2*3*4', 24",
+            "'9 * 0.5', 4.5"
+    })
+    void multiplications(String expression, double expectedValue) {
+        Calculator calculator = new Calculator();
+
+        assertEquals(expectedValue, calculator.multiply(expression));
+    }
+
 //    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
 //    @CsvSource({
 //            "'0 * 0 + 1', 1",

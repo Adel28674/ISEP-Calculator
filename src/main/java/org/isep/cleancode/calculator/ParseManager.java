@@ -13,4 +13,8 @@ public class ParseManager {
         return expression.split("\\-");
     }
 
+    public static String[] splitExpressionByStar(String expression) {
+        return expression.split("\\*");
+    }
+
 }

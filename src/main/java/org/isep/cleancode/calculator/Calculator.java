@@ -11,18 +11,20 @@ public class Calculator {
 
     public double addition(String expression) {
         Double sum = 0.0;
-        for (String value : ParseManager.splitExpressionByPlus(expression)) {
-            sum += ParseManager.parseDouble(value.trim());
+        for (String factor : ParseManager.splitExpressionByPlus(expression)) {
+            sum += ParseManager.parseDouble(factor);
         }
         return sum;
     }
 
     public double substract(String expression){
         String [] factors = ParseManager.splitExpressionByMinus(expression);
-        double sum = ParseManager.parseDouble(factors[0].trim());
-        for(int i = 1; i<factors.length; i++){
-            sum -= ParseManager.parseDouble(factors[i].trim());
+
+        double sum = ParseManager.parseDouble(factors[0]);
+        for (int i = 1; i < factors.length; i++) {
+            sum -= ParseManager.parseDouble(factors[i]);
         }
+
         return sum;
     }
 

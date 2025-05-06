@@ -1,38 +1,32 @@
 package org.isep.cleancode.calculator;
 
 public class Calculator {
+
+
     public double evaluateMathExpression(String expression) {
 
         expression = expression.replaceAll(" ", "");
 
+
         String[] additionParts = StringSpliter.splitExpressionByPlus(expression);
         double total = 0.0;
 
-        for (String addPart : additionParts) {
-            String[] subtractionParts = StringSpliter.splitExpressionByMinus(addPart);
-            double subResult = handleMultiplication(subtractionParts[0]);
+        for (String additionPart : additionParts) {
+
+            String[] subtractionParts = StringSpliter.splitExpressionByMinus(additionPart);
+
+            double subResult = multiply(subtractionParts[0]);
 
             for (int i = 1; i < subtractionParts.length; i++) {
-                subResult -= handleMultiplication(subtractionParts[i]);
+                subResult -= multiply(subtractionParts[i]);
             }
 
             total += subResult;
         }
 
         return total;
-
     }
 
-    private double handleMultiplication(String expression) {
-        String[] factors = StringSpliter.splitExpressionByStar(expression);
-        double result = ParserManager.parseDouble(factors[0]);
-
-        for (int i = 1; i < factors.length; i++) {
-            result *= ParserManager.parseDouble(factors[i]);
-        }
-
-        return result;
-    }
 
     public double convertStringToDouble(String expression){
         return ParserManager.parseDouble(expression);

@@ -88,18 +88,18 @@ class CalculatorTest {
         assertEquals(expectedValue, calculator.multiply(expression));
     }
 
-//    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
-//    @CsvSource({
-//            "'0 * 0 + 1', 1",
-//            "'1 + 2 * 2 + 1', 6",
-//            "'5 - 5 * 0 - 4', 1",
-//            "'10 - 2 * 10', -10"
-//    })
-//    void multipleOperations(String expression, double expectedValue) {
-//        Calculator calculator = new Calculator();
-//
-//        assertEquals(expectedValue, calculator.evaluateMathExpression(expression));
-//    }
+    @ParameterizedTest(name = "{index} => input={0}, expected={1}")
+    @CsvSource({
+            "'0 * 0 + 1', 1",
+            "'1 + 2 * 2 + 1', 6",
+            "'5 - 5 * 0 - 4', 1",
+            "'10 - 2 * 10', -10"
+    })
+    void multipleOperations(String expression, double expectedValue) {
+        Calculator calculator = new Calculator();
+
+        assertEquals(expectedValue, calculator.evaluateMathExpression(expression));
+    }
 
 
 
